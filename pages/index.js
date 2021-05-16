@@ -13,41 +13,47 @@ import {
   Button,
 } from '@chakra-ui/react';
 
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-
 export default function Home() {
   return (
     <>
       <Head>
         <title>Workshops{config.titleSuffix}</title>
         <meta property="og:title" content={`Workshops${config.titleSuffix}`} key="ogtitle"/>
-        <meta name="description" content=""/>
-        <meta property="og:description" content="" key="ogdesc"/>
+        <meta name="description" content="Our collection of exclusive community-contributed coding tutorials + ideas."/>
+        <meta property="og:description" content="Our collection of exclusive community-contributed coding tutorials + ideas." key="ogdesc"/>
       </Head>
 
-      <Box>
-        <Container maxW="container.lg" px={8} py={12} align="center">
-          <Heading as="h1" size="2xl" color="brand.red">
-            Blair Hack Club Workshops
-          </Heading>
-          <Heading as="h2" size="md" mt={4} fontWeight="normal">
-            Learn to code with our own collection of community-contributed coding tutorials + ideas.
-          </Heading>
-          <Stack direction="row" justify="center" spacing={4} mt={4} color="brand.red">
-            <Link href="https://workshops.hackclub.com/preface" style={{ textDecoration: "none" }} isExternal>
-              <Button borderRadius="3xl" borderColor="brand.red" borderWidth={2} fontWeight="bold">
-                Preface
-              </Button>
-            </Link>
-            <Link href="https://hackclub.com/philosophy/" style={{ textDecoration: "none" }} isExternal>
-              <Button borderRadius="3xl" borderColor="brand.red" borderWidth={2} fontWeight="bold">
-                Our Philosophy
-              </Button>
-            </Link>
-          </Stack>
-        </Container>
-      </Box>
+      <Container maxW="container.lg" px={8} py={12} align="center">
+        <Heading as="h1" size="2xl" color="brand.red">
+          Blair Hack Club Workshops
+        </Heading>
+        <Heading as="h2" size="md" mt={4} fontWeight="normal">
+          Learn to code with our own collection of community-contributed coding tutorials + ideas.
+        </Heading>
+        <Stack direction="row" justify="center" spacing={4} mt={4} color="brand.red">
+          <Link href="https://workshops.hackclub.com/preface" style={{ textDecoration: "none" }} isExternal>
+            <Button borderRadius="3xl" borderColor="brand.red" borderWidth={2} fontWeight="bold">
+              Preface
+            </Button>
+          </Link>
+          <Link href="https://hackclub.com/philosophy/" style={{ textDecoration: "none" }} isExternal>
+            <Button borderRadius="3xl" borderColor="brand.red" borderWidth={2} fontWeight="bold">
+              Our Philosophy
+            </Button>
+          </Link>
+        </Stack>
+      </Container>
+
+      <Container maxW="container.lg">
+        <Text fontSize="lg" align="center">
+          🚧 This site is under construction. 🚧
+        </Text>
+        <Text fontSize="lg" align="center">
+          In the mean time, 
+          check out our <Link https="https://blair.hackclub.com">website</Link> and 
+          join our <Link href="https://bhc.page.link/discord" isExternal>Discord</Link>!
+        </Text>
+      </Container>
     </>
   );
 }

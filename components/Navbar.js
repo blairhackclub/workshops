@@ -33,8 +33,7 @@ export default function NavbarComponent({ ...rest }) {
         <Stack
           px={8} spacing={4}
           align="center"
-          justify={["center", "space-between", "flex-end", "flex-end"]}
-          direction={["column", "row", "row", "row"]}
+          direction="row"
         >
           <Link href={config.githubRepo} isExternal><IconButton icon={<Icon glyph="github"/>}/></Link>
           <ColorModeToggle color={useColorModeValue("brand.red", "white")}/>
