@@ -1,21 +1,31 @@
-# Next.js Chakra Template
-Linkai's Next.js template using the Chakra UI library.
+<p align="center"><img width="192" alt="Hack Club logo" src="https://blair.hackclub.com/images/logos/blairhackclub.png"></p>
+<h1 align="center"><a href="https://blair.hackclub.com/">Blair Hack Club Workshops</a></h1>
+<p align="center"><i>Our collection of community-contributed coding tutorials + ideas.</i></p>
 
-## 🛠️ Installation & Set Up
-1. Install dependencies
-```
-npm install
-```
-2. Start development server
-```
-npm run dev
-```
 
-## 🚀 Deploy
-To deploy a static site:
-1. Go to `package.json` and make sure the build script is set to `next build && next export`
-2. Run the build script
-```
-npm run build
-```
-3. Deploy to a static web hosting service such as [Netlify](https://netlify.com) or [Vercel](https://vercel.com)
+For new developers getting started, run the following in your terminal:
+
+Download the code to your computer:
+
+    $ git clone https://github.com/blairhackclub/workshops
+
+Install dependencies:
+
+    $ npm install
+
+Start running the website on your computer:
+
+    $ npm run dev
+
+And then open up your web browser and go to http://localhost:3000.
+
+Powered by [Next.js] with [MDX], [Chakra UI], & [Hack Club Brand].
+
+---
+
+By Hack Clubbers at Blair Hack Club, 2021. MIT License.
+
+[next.js]: https://nextjs.org
+[mdx]: https://mdxjs.com/
+[chakra ui]: https://chakra-ui.com
+[hack club brand]: https://hackclub.com/brand
