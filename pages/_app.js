@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.png" />
 
         <meta property="og:image" content={config.image} key="ogimage"/>
-        <meta property="og:site_name" content={config.titleDefault} key="ogsitename"/>
+        <meta property="og:site_name" content={config.siteName} key="ogsitename"/>
         {/* <meta name='theme-color' content={config.color}/> */}
       </Head>
       
