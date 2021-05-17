@@ -4,6 +4,7 @@ import config from '../data/config';
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from '../lib/theme';
 
+import MDXProvider from "../components/MDXProvider";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -21,9 +22,11 @@ function MyApp({ Component, pageProps }) {
       </Head>
       
       <ChakraProvider theme={theme} resetCSS>
-        <Navbar/>
-        <Component {...pageProps}/>
-        <Footer/>
+        <MDXProvider>
+          <Navbar/>
+          <Component {...pageProps}/>
+          <Footer/>
+        </MDXProvider>
       </ChakraProvider>
     </>
   );

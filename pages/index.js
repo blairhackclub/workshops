@@ -32,12 +32,12 @@ export default function Home() {
         </Heading>
         <Stack direction="row" justify="center" spacing={4} mt={4} color="brand.red">
           <Link href="https://workshops.hackclub.com/preface" style={{ textDecoration: "none" }} isExternal>
-            <Button borderRadius="3xl" borderColor="brand.red" borderWidth={2} fontWeight="bold">
+            <Button borderRadius="full" borderColor="brand.red" borderWidth={2} fontWeight="bold">
               Preface
             </Button>
           </Link>
           <Link href="https://hackclub.com/philosophy/" style={{ textDecoration: "none" }} isExternal>
-            <Button borderRadius="3xl" borderColor="brand.red" borderWidth={2} fontWeight="bold">
+            <Button borderRadius="full" borderColor="brand.red" borderWidth={2} fontWeight="bold">
               Our Philosophy
             </Button>
           </Link>
@@ -45,14 +45,10 @@ export default function Home() {
       </Container>
 
       <Container maxW="container.lg">
-        <Text fontSize="lg" align="center">
-          🚧 This site is under construction. 🚧
-        </Text>
-        <Text fontSize="lg" align="center">
-          In the mean time, 
-          check out our <Link https="https://blair.hackclub.com">website</Link> and 
-          join our <Link href="https://bhc.page.link/discord" isExternal>Discord</Link>!
-        </Text>
+        <Stack align="center">
+          <Link href="/markdown">Markdown</Link>
+          <Link href="/test">Sample Letter</Link>
+        </Stack>
       </Container>
     </>
   );

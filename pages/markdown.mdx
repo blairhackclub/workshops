@@ -1,0 +1,239 @@
+import Letterhead from '../components/layouts/Letterhead';
+
+<Letterhead
+  title="Markdown"
+  description="A page showing all the supported features of markdown on this site. Custom Chakra UI and React components are also supported."
+  date="2021-5-16"
+  author={{
+    name: "@linkai101",
+    avatar: "https://blair.hackclub.com/images/team/linkai.jpeg",
+    url: "https://github.com/linkai101"
+  }}
+>
+
+# h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+
+```
+# h1 Heading
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
+```
+
+## Horizontal Line
+___
+---
+***
+
+```
+___
+---
+***
+```
+
+
+## Styling
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+~~Strikethrough~~
+
+```
+**This is bold text**
+
+__This is bold text__
+
+*This is italic text*
+
+_This is italic text_
+
+~~Strikethrough~~
+```
+
+
+## Blockquote
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+
+```
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
+```
+
+
+## Unordered Lists
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+
+```
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
+```
+
+## Ordered Lists
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+
+57. Starting with an offset...
+1. ...will continue the numbers
+
+```
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
+
+
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
+
+
+57. Starting with an offset...
+1. ...will continue counting!
+```
+
+
+## Code
+
+This `code` is inline!
+
+    // This code block can be indented!
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+
+```
+You can also put "fences" around your code.
+```
+↓ This is the raw code by the way!
+
+```
+This `code` is inline!
+
+    // This code block can be indented!
+    line 1 of code
+    line 2 of code
+    line 3 of code
+
+
+\`\`\`
+You can also put "fences" around your code.
+\`\`\`
+```
+
+## Tables
+
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+
+```
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
+```
+
+## Links
+
+[link text](http://blair.hackclub.com)
+
+[link with title](http://blair.hackclub.com/image "title text!") (hover over the link to see the title!)
+
+Autodetected link https://github.com/nodeca/pica
+
+```
+[link text](http://blair.hackclub.com)
+
+[link with title](http://blair.hackclub.com/image "title text!") (hover over the link to see the title!)
+
+Autodetected link https://github.com/nodeca/pica
+```
+
+
+## Images
+
+Image 1
+![Minion](https://octodex.github.com/images/minion.png)
+Image 2
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Image 3
+![Alt text][id]
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+
+```
+Image 1
+![Minion](https://octodex.github.com/images/minion.png)
+Image 2
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+
+Image 3
+![Alt text][id]
+
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+```
+
+## Footnotes
+
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
+
+```
+Footnote 1 link[^first].
+
+Footnote 2 link[^second].
+
+Duplicated footnote reference[^second].
+
+[^first]: Footnote **can have markup**
+
+    and multiple paragraphs.
+
+[^second]: Footnote text.
+```
+
+</Letterhead>
