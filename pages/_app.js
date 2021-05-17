@@ -12,8 +12,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>{config.titleDefault}</title>
-        <meta property="og:title" content={config.titleDefault} key="ogtitle"/>
+        <title>{config.title}</title>
+        <meta property="og:title" content={config.title} key="ogtitle"/>
         <link rel="icon" href="/favicon.png" />
 
         <meta property="og:image" content={config.image} key="ogimage"/>

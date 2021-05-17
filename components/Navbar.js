@@ -55,7 +55,7 @@ function Logo({ ...rest }) {
 
 function Home({ ...rest }) {
   return (
-    <Box px={8} py={4} {...rest}>
+    <Box p={4} {...rest}>
       <NextLink href="/" passHref>
         <Link>
           <Flex align="center">

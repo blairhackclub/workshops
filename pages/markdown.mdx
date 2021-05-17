@@ -9,6 +9,7 @@ import Letterhead from '../components/layouts/Letterhead';
     avatar: "https://blair.hackclub.com/images/team/linkai.jpeg",
     url: "https://github.com/linkai101"
   }}
+  path="/pages/markdown.mdx"
 >
 
 # h1 Heading
@@ -105,7 +106,7 @@ _This is italic text_
 
 
 57. Starting with an offset...
-1. ...will continue the numbers
+1. ...will continue the counting!
 
 ```
 1. Lorem ipsum dolor sit amet
@@ -137,19 +138,19 @@ You can also put "fences" around your code.
 ```
 ↓ This is the raw code by the way!
 
-```
-This `code` is inline!
 
-    // This code block can be indented!
-    line 1 of code
-    line 2 of code
-    line 3 of code
+    This `code` is inline!
+
+        // This code block can be indented!
+        line 1 of code
+        line 2 of code
+        line 3 of code
 
 
-\`\`\`
-You can also put "fences" around your code.
-\`\`\`
-```
+    ```
+    You can also put "fences" around your code.
+    ```
+
 
 ## Tables
 
@@ -173,14 +174,20 @@ You can also put "fences" around your code.
 
 [link with title](http://blair.hackclub.com/image "title text!") (hover over the link to see the title!)
 
-Autodetected link https://github.com/nodeca/pica
+Autodetected link https://github.com/linkai101
+
+[assign links later in the file][linkID]
+[linkID]: https://linkaiwu.com "Linkai's Site"
 
 ```
 [link text](http://blair.hackclub.com)
 
 [link with title](http://blair.hackclub.com/image "title text!") (hover over the link to see the title!)
 
-Autodetected link https://github.com/nodeca/pica
+Autodetected link https://github.com/linkai101
+
+[assign links later in the file][linkID]
+[linkID]: https://linkaiwu.com "Linkai's Site"
 ```
 
 
