@@ -49,11 +49,6 @@ export default function Home({ workshops }) {
               Our Philosophy
             </Button>
           </Link>
-          <Link href="https://workshops.hackclub.com" style={{ textDecoration: "none" }} isExternal>
-            <Button borderRadius="full" borderColor="brand.red" borderWidth={2} fontWeight="bold">
-              More Workshops
-            </Button>
-          </Link>
         </Stack>
       </Container>
 
