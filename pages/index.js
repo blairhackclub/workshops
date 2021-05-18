@@ -1,5 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 import NextLink from 'next/link';
 import config from '../data/config';
 
@@ -15,12 +16,33 @@ import {
   Text,
   Link,
   Button,
+  Select,
   Image,
   useColorModeValue,
+  useBreakpointValue,
 } from '@chakra-ui/react';
 
 export default function Home({ workshops }) {
+  const router = useRouter();
   const [current, setCurrent] = React.useState("starthere");
+
+  React.useEffect(() => {
+    checkQuery();
+  }, [router]);
+
+  function checkQuery() {
+    if (router.query?.category) {
+      if (!workshops[router.query.category]) { // if is not a valid category
+        return router.push(`/`, undefined, { shallow: true });
+      }
+      setCurrent(router.query.category);
+    }
+  }
+
+  function onCategoryClick(newCategory) {
+    setCurrent(newCategory);
+    router.push(`/?category=${newCategory}`, undefined, { shallow: true });
+  }
 
   return (
     <>
@@ -38,9 +60,10 @@ export default function Home({ workshops }) {
         <Heading as="h2" size="md" mt={4} fontWeight="normal">
           Learn to code with our own collection of community-contributed coding tutorials + ideas.
         </Heading>
-        <Stack direction="row" justify="center" spacing={4} mt={6} color="brand.red">
+
+        <Stack direction="row" justify="center" spacing={{ base: 2, md: 4 }} mt={6} color="brand.red">
           <Link href="https://workshops.hackclub.com/preface" style={{ textDecoration: "none" }} isExternal>
-            <Button 
+            <Button size={useBreakpointValue({ base: "sm", md: "md" })}
               borderRadius="full" borderColor="brand.red" borderWidth={2}
               bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
               fontWeight="bold"
@@ -49,7 +72,7 @@ export default function Home({ workshops }) {
             </Button>
           </Link>
           <Link href="https://hackclub.com/philosophy/" style={{ textDecoration: "none" }} isExternal>
-            <Button
+            <Button size={useBreakpointValue({ base: "sm", md: "md" })}
               borderRadius="full" borderColor="brand.red" borderWidth={2}
               bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
               fontWeight="bold"
@@ -57,12 +80,26 @@ export default function Home({ workshops }) {
               Our Philosophy
             </Button>
           </Link>
+          <NextLink href="/meetings" passHref>
+            <Link style={{ textDecoration: "none" }}>
+              <Button w="100%" size={useBreakpointValue({ base: "sm", md: "md" })}
+                borderRadius="full" borderColor="brand.red" borderWidth={2}
+                bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
+                fontWeight="bold"
+              >
+                Meetings
+              </Button>
+            </Link>
+          </NextLink>
         </Stack>
       </Container>
 
       <Container maxW="container.xl">
         <Flex direction={{ base: "column", md: "row" }}>
-          <Categories py={4} flex={1} workshops={workshops} current={current} setCurrent={setCurrent}/>
+          {useBreakpointValue({ 
+            base: <CategoriesSelect flex={1} workshops={workshops} current={current} setCurrent={setCurrent} onCategoryClick={onCategoryClick}/>, 
+            md: <Categories py={4} flex={1} workshops={workshops} current={current} setCurrent={setCurrent} onCategoryClick={onCategoryClick}/> 
+          })}
           <Details pl={{ base: 0, md: 12 }} pt={{ base: 4, md: 0 }} flex={3} workshops={workshops} current={current}/>
         </Flex>
       </Container>
@@ -70,7 +107,7 @@ export default function Home({ workshops }) {
   );
 }
 
-function Categories({ workshops, current, setCurrent, ...rest }) {
+function Categories({ workshops, current, setCurrent, onCategoryClick, ...rest }) { // For desktop
   return (
     <Stack {...rest}>
       {Object.entries(workshops).sort((a,b) => (a[1].info.order > b[1].info.order || !a[1].info.order) ? 1 : -1)
@@ -95,7 +132,7 @@ function Categories({ workshops, current, setCurrent, ...rest }) {
               borderRadius="xl" overflow="hidden"
               key={c}
             >
-              <Link style={{ textDecoration: "none" }} onClick={e => setCurrent(c)}>
+              <Link style={{ textDecoration: "none" }} onClick={e => onCategoryClick(c)}>
                 <Box py={2} px={3}>
                   <Heading as="h3" size="sm">
                     {props.info.name}
@@ -108,6 +145,23 @@ function Categories({ workshops, current, setCurrent, ...rest }) {
       )}
       
     </Stack>
+  );
+}
+
+function CategoriesSelect({ workshops, current, setCurrent, onCategoryClick, ...rest }) { // For mobile
+  return (
+    <Select 
+      value={current} onChange={e => onCategoryClick(e.target.value)}
+      color="brand.red" fontWeight="bold"
+      borderColor="brand.red" borderWidth={2}
+      borderRadius="xl" overflow="hidden"
+      {...rest}
+    >
+      {Object.entries(workshops).sort((a,b) => (a[1].info.order > b[1].info.order || !a[1].info.order) ? 1 : -1)
+      .map(([c, props]) =>
+        <option value={c} key={c}>{props.info.name}</option>
+      )}
+    </Select>
   );
 }
 
