@@ -40,12 +40,20 @@ export default function Home({ workshops }) {
         </Heading>
         <Stack direction="row" justify="center" spacing={4} mt={6} color="brand.red">
           <Link href="https://workshops.hackclub.com/preface" style={{ textDecoration: "none" }} isExternal>
-            <Button borderRadius="full" borderColor="brand.red" borderWidth={2} fontWeight="bold">
+            <Button 
+              borderRadius="full" borderColor="brand.red" borderWidth={2}
+              bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
+              fontWeight="bold"
+            >
               Preface
             </Button>
           </Link>
           <Link href="https://hackclub.com/philosophy/" style={{ textDecoration: "none" }} isExternal>
-            <Button borderRadius="full" borderColor="brand.red" borderWidth={2} fontWeight="bold">
+            <Button
+              borderRadius="full" borderColor="brand.red" borderWidth={2}
+              bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
+              fontWeight="bold"
+            >
               Our Philosophy
             </Button>
           </Link>
@@ -69,28 +77,27 @@ function Categories({ workshops, current, setCurrent, ...rest }) {
       .map(([c, props]) =>
         <Box key={c}>
           {c === current ?
-            <Box bg={useColorModeValue("white", "gray.700")} color="brand.red" 
+            <Box color="brand.red"
               borderColor="brand.red" borderWidth={2}
-              _hover={{ bg: useColorModeValue("gray.100", "gray.600") }}
+              _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
               borderRadius="xl" overflow="hidden"
-              boxShadow="xl"
             >
               <Box py={2} px={3}>
-                <Heading as="h3" size="md">
+                <Heading as="h3" size="sm">
                   {props.info.name}
                 </Heading>
               </Box>
             </Box>
           :
-            <Box bg={useColorModeValue("white", "gray.700")}
-              _hover={{ bg: useColorModeValue("gray.100", "gray.600") }}
+            <Box
+              borderColor="brand.muted" borderWidth={2}
+              _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
               borderRadius="xl" overflow="hidden"
-              boxShadow="xl"
               key={c}
             >
               <Link style={{ textDecoration: "none" }} onClick={e => setCurrent(c)}>
                 <Box py={2} px={3}>
-                  <Heading as="h3" size="md">
+                  <Heading as="h3" size="sm">
                     {props.info.name}
                   </Heading>
                 </Box>
