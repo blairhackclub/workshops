@@ -80,14 +80,14 @@ export default function Home({ workshops }) {
               Our Philosophy
             </Button>
           </Link>
-          <NextLink href="/meetings" passHref>
+          <NextLink href="/challenges" passHref>
             <Link style={{ textDecoration: "none" }}>
               <Button w="100%" size={useBreakpointValue({ base: "sm", md: "md" })}
                 borderRadius="full" borderColor="brand.red" borderWidth={2}
                 bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
                 fontWeight="bold"
               >
-                Meetings
+                Challenges
               </Button>
             </Link>
           </NextLink>
@@ -110,7 +110,7 @@ export default function Home({ workshops }) {
 function Categories({ workshops, current, setCurrent, onCategoryClick, ...rest }) { // For desktop
   return (
     <Stack {...rest}>
-      {Object.entries(workshops).sort((a,b) => (a[1].info.order > b[1].info.order || !a[1].info.order) ? 1 : -1)
+      {Object.entries(workshops)
       .map(([c, props]) =>
         <Box key={c}>
           {c === current ?
@@ -153,11 +153,11 @@ function CategoriesSelect({ workshops, current, setCurrent, onCategoryClick, ...
     <Select 
       value={current} onChange={e => onCategoryClick(e.target.value)}
       color="brand.red" fontWeight="bold"
-      borderColor="brand.red" borderWidth={2}
-      borderRadius="xl" overflow="hidden"
+      borderWidth={2} borderRadius="xl"
+      overflow="hidden"
       {...rest}
     >
-      {Object.entries(workshops).sort((a,b) => (a[1].info.order > b[1].info.order || !a[1].info.order) ? 1 : -1)
+      {Object.entries(workshops)
       .map(([c, props]) =>
         <option value={c} key={c}>{props.info.name}</option>
       )}
@@ -175,7 +175,7 @@ function Details({ workshops, current, ...rest }) {
         </Text>
       </Box>
 
-      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={8} py={4}>
+      <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={8} py={4}>
         {workshops[current].data.sort((a,b) => (a.order > b.order || !a.order) ? 1 : -1)
         .map(w =>
           <Box bg={useColorModeValue("white", "gray.700")}
@@ -198,7 +198,7 @@ function Details({ workshops, current, ...rest }) {
             {w.thumbnail &&
               <Image 
                 w="100%" h="128px" 
-                src={w.thumbnail} alt="test"
+                src={w.thumbnail} alt={w.title}
                 objectFit="cover"
               />
             }

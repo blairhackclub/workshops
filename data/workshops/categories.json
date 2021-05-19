@@ -1,0 +1,38 @@
+{
+  "starthere": {
+    "name": "Start here",
+    "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps."
+  },
+  "webdev": {
+    "name": "Web development",
+    "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs."
+  },
+  "gamedev": {
+    "name": "Game development",
+    "description": "Learn to build games, both locally and on the web!"
+  },
+  "python": {
+    "name": "Python",
+    "description": "Learn to use one of the most powerful and beginner-friendly languages."
+  },
+  "ml": {
+    "name": "Machine learning",
+    "description": "Learn how to make machines learn with these fun projects!"
+  },
+  "java": {
+    "name": "Java",
+    "description": "Learn Java, the language behind many mobile, web, and desktop apps. This course is also good for preparing for the APCSA exam!"
+  },
+  "hardware": {
+    "name": "Hardware",
+    "description": "Bring projects from cyberspace to the real world with Arduinos and more."
+  },
+  "cybersec": {
+    "name": "Cybersecurity",
+    "description": "Learn about cybersecurity."
+  },
+  "misc": {
+    "name": "Miscellaneous",
+    "description": "Workshops not properly categorized yet."
+  }
+}
