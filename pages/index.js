@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import NextLink from 'next/link';
-import config from '../data/config';
+import config from '../config';
 
 import { getWorkshopList } from "../lib/workshops";
 
@@ -24,20 +24,20 @@ import {
 
 export default function Home({ workshops }) {
   const router = useRouter();
-  const [current, setCurrent] = React.useState("starthere");
+  const [current, setCurrent] = React.useState("starters");
 
   React.useEffect(() => {
-    checkQuery();
+    //checkQuery();
   }, [router]);
 
-  function checkQuery() {
+  /*function checkQuery() {
     if (router.query?.category) {
       if (!workshops[router.query.category]) { // if is not a valid category
         return router.push(`/`, undefined, { shallow: true });
       }
       setCurrent(router.query.category);
     }
-  }
+  }*/
 
   function onCategoryClick(newCategory) {
     setCurrent(newCategory);
@@ -112,8 +112,7 @@ export default function Home({ workshops }) {
 function Categories({ workshops, current, setCurrent, onCategoryClick, ...rest }) { // For desktop
   return (
     <Stack {...rest}>
-      {Object.entries(workshops)
-      .map(([c, props]) =>
+      {Object.entries(workshops).map(([c, props]) =>
         <Box key={c}>
           {c === current ?
             <Box color="brand.red"
@@ -123,7 +122,7 @@ function Categories({ workshops, current, setCurrent, onCategoryClick, ...rest }
             >
               <Box py={2} px={3}>
                 <Heading as="h3" size="sm">
-                  {props.info.name}
+                  {props.title}
                 </Heading>
               </Box>
             </Box>
@@ -137,7 +136,7 @@ function Categories({ workshops, current, setCurrent, onCategoryClick, ...rest }
               <Link style={{ textDecoration: "none" }} onClick={e => onCategoryClick(c)}>
                 <Box py={2} px={3}>
                   <Heading as="h3" size="sm">
-                    {props.info.name}
+                    {props.title}
                   </Heading>
                 </Box>
               </Link>
@@ -145,7 +144,6 @@ function Categories({ workshops, current, setCurrent, onCategoryClick, ...rest }
           }
         </Box>
       )}
-      
     </Stack>
   );
 }
@@ -159,8 +157,7 @@ function CategoriesSelect({ workshops, current, setCurrent, onCategoryClick, ...
       overflow="hidden"
       {...rest}
     >
-      {Object.entries(workshops)
-      .map(([c, props]) =>
+      {Object.entries(workshops).map(([c, props]) =>
         <option value={c} key={c}>{props.info.name}</option>
       )}
     </Select>
@@ -171,23 +168,22 @@ function Details({ workshops, current, ...rest }) {
   return (
     <Box {...rest}>
       <Box mt={4}>
-        <Heading as="h2" size="lg">{workshops[current].info.name}</Heading>
+        <Heading as="h2" size="lg">{workshops[current].title}</Heading>
         <Text fontSize="lg" color="brand.muted">
-          {workshops[current].info.description}
+          {workshops[current].description}
         </Text>
       </Box>
 
       <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={8} py={4}>
-        {workshops[current].data.sort((a,b) => (a.order > b.order || !a.order) ? 1 : -1)
-        .map(w =>
+        {workshops[current].data.map(w =>
           <Box bg={useColorModeValue("white", "gray.700")}
             borderRadius="xl" overflow="hidden"
             boxShadow="xl"
-            key={`${current}/${w.slug}`}
+            key={w.slug}
           >
             <Box py={4} px={3}>
               <Heading as="h3" size="md">
-                <NextLink href={`/${current}/${w.slug}`} passHref>
+                <NextLink href={`/${w.slug}`} passHref>
                   <Link>
                     {w.title}
                   </Link>
@@ -205,7 +201,7 @@ function Details({ workshops, current, ...rest }) {
               />
             }
           </Box>
-        )}
+          )}
       </SimpleGrid>
       {workshops[current].data.length === 0 &&
         <Text>

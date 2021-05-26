@@ -1,16 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
-import config from '../../data/config';
+import config from '../config';
 
 import matter from "gray-matter";
 import { MDXRemote } from 'next-mdx-remote';
 import { serialize } from 'next-mdx-remote/serialize'
-import { getWorkshopSlugs, getWorkshopData } from "../../lib/workshops";
+import { getWorkshopSlugs, getWorkshopData } from "../lib/workshops";
 
 import {
   Box,
   Container,
-  Stack,
   Heading,
   Text,
   Button,
@@ -25,13 +24,17 @@ import Icon from '@hackclub/icons';
 export default function WorkshopPage({ params, source, frontMatter }) {
   const githubURL = 
     process.env.NODE_ENV === 'production' ? 
-      `${config.githubRepo}/blob/master/data/workshops/${params.category}/${params.slug}.mdx` 
-    : `${config.githubRepo}/blob/dev/data/workshops/${params.category}/${params.slug}.mdx`;
+      `${config.githubRepo}/blob/master/data/workshops/${params.slug}.mdx` 
+    : `${config.githubRepo}/blob/dev/data/workshops/${params.slug}.mdx`;
   const author = {
     name: frontMatter.author,
     avatar: `https://github.com/${frontMatter.author}.png`,
     url: `https://github.com/${frontMatter.author}`
-  }
+  };
+  var components;
+  try {
+    components = require(`../workshops/${params.slug}/components`).default;
+  } catch (err) {}
 
   return (
     <>
@@ -68,7 +71,7 @@ export default function WorkshopPage({ params, source, frontMatter }) {
           Last updated: {frontMatter.date}
         </Text>
 
-        <MDXRemote {...source}/>
+        <MDXRemote {...source} components={components}/>
         
         <Box py={4}>
           <Link href={githubURL} 
@@ -93,9 +96,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const workshopContent = await getWorkshopData(params.category, params.slug);
+  const workshopContent = await getWorkshopData(params.slug);
   const { data, content } = matter(workshopContent);
-  const mdxSource = await serialize(content);
+  const mdxSource = await serialize(content, { scope: data });
   return {
     props: {
       params,

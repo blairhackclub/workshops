@@ -1,6 +1,6 @@
 import '../styles/globals.css';
 import Head from 'next/head';
-import config from '../data/config';
+import config from '../config';
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from '../lib/theme';
 

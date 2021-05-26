@@ -1,0 +1,61 @@
+{
+  "starters": {
+    "title": "Start here",
+    "description": "Set out on your journey by building your own website, then move on to multiplayer games and collaborative web apps.",
+    "slugs": [
+      "personal_website",
+      "splatter_paint",
+      "colorful_grammar",
+      "speak_colors",
+      "sound_galaxy",
+      "teachable_machine"
+    ]
+  },
+  "web": {
+    "title": "Web development",
+    "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs",
+    "slugs": []
+  },
+  "games": {
+    "title": "Game development",
+    "description": "Learn to build games, both locally and on the web!",
+    "slugs": []
+  },
+  "bots": {
+    "title": "Chat bots",
+    "description": "Make all sorts of bots for popular platforms such as Discord & Slack.",
+    "slugs": []
+  },
+  "python": {
+    "title": "Python",
+    "description": "Learn to use one of the most powerful and beginner-friendly languages.",
+    "slugs": []
+  },
+  "ml": {
+    "title": "Machine learning",
+    "description": "Learn how to make machines learn with these fun projects!",
+    "slugs": []
+  },
+  "java": {
+    "title": "Java",
+    "description": "Learn Java, the language behind many mobile, web, and desktop apps. This course is also good for preparing for the APCSA exam!",
+    "slugs": []
+  },
+  "hardware": {
+    "title": "Hardware",
+    "description": "Bring projects from cyberspace to the real world with Arduinos and more.",
+    "slugs": []
+  },
+  "cybersec": {
+    "title": "Cybersec",
+    "description": "Learn about cybersecurity and finding vulnerabilities in systems.",
+    "slugs": []
+  },
+  "misc": {
+    "title": "Miscellaneous",
+    "description": "Workshops not properly categorized yet.",
+    "slugs": [
+      "example"
+    ]
+  }
+}

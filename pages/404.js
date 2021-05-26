@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import NextLink from 'next/link';
-import config from '../data/config';
+import config from '../config';
 
 import {
   Box,

@@ -4,7 +4,6 @@ thumbnail: 'https://workshops.hackclub.com/_next/image?url=%2Fcontent%2Fworkshop
 description: 'Make your first website from scratch'
 author: 'MaxWofford'
 date: '2021-5-17'
-order: 1
 ---
 
 > This workshop was adapted from [Hack Club Workshops](https://workshops.hackclub.com).

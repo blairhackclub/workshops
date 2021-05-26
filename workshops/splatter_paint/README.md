@@ -4,7 +4,6 @@ thumbnail: 'https://github.com/hackclub/hackclub/blob/main/workshops/splatter_pa
 description: 'Crazy colorful splatter paint in your browser with Paper.js'
 author: 'MatthewStanciu'
 date: '2021-5-17'
-order: 2
 ---
 
 > This workshop was adapted from [Hack Club Workshops](https://workshops.hackclub.com).
