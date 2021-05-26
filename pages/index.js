@@ -80,6 +80,7 @@ export default function Home({ workshops }) {
               Our Philosophy
             </Button>
           </Link>
+          {/* 
           <NextLink href="/challenges" passHref>
             <Link style={{ textDecoration: "none" }}>
               <Button w="100%" size={useBreakpointValue({ base: "sm", md: "md" })}
@@ -90,7 +91,8 @@ export default function Home({ workshops }) {
                 Challenges
               </Button>
             </Link>
-          </NextLink>
+          </NextLink> 
+          */}
         </Stack>
       </Container>
 

@@ -27,7 +27,7 @@ export default function NavbarComponent({ ...rest }) {
         color="brand.red"
         {...rest}
       >
-        {['/', '/404'].includes(router.pathname) ? <Logo/>
+        {['/'].includes(router.pathname) ? <Logo/>
         : <Home/>}
 
         <Stack
