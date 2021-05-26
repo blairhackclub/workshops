@@ -158,7 +158,7 @@ function CategoriesSelect({ workshops, current, setCurrent, onCategoryClick, ...
       {...rest}
     >
       {Object.entries(workshops).map(([c, props]) =>
-        <option value={c} key={c}>{props.info.name}</option>
+        <option value={c} key={c}>{props.title}</option>
       )}
     </Select>
   );
