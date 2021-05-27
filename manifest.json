@@ -79,36 +79,66 @@
     "title": "Chat bots",
     "description": "Make all sorts of bots for popular platforms such as Discord & Slack.",
     "slugs": [],
-    "hq": []
+    "hq": [
+      "slack_todo_list",
+      "slack_pfp",
+      "discord_bot_with_rust"
+    ]
   },
   "python": {
     "title": "Python",
     "description": "Learn to use one of the most powerful and beginner-friendly languages.",
     "slugs": [],
-    "hq": []
+    "hq": [
+      "selenium",
+      "python_turtle",
+      "python_data_viz",
+      "flask_quote_generator",
+      "flask_login"
+    ]
   },
   "ml": {
     "title": "Machine learning",
     "description": "Learn how to make machines learn with these fun projects!",
     "slugs": [],
-    "hq": []
+    "hq": [
+      "teachable_machine",
+      "feature_extractor",
+      "digit_recognition"
+    ]
   },
   "hardware": {
     "title": "Hardware",
     "description": "Bring projects from cyberspace to the real world with Arduinos and more.",
     "slugs": [],
-    "hq": []
+    "hq": [
+      "blink",
+      "temperature_monitor",
+      "iotworkshop",
+      "coffin_dance_arduino",
+      "micro_bit_flappy_bird",
+      "seven_segment_display",
+      "line_following_robot"
+    ]
   },
   "cybersec": {
     "title": "Cybersecurity",
     "description": "Learn about cybersecurity and finding vulnerabilities in systems.",
     "slugs": [],
-    "hq": []
+    "hq": [
+      "help_orpheus",
+      "save_hack_club_bank"
+    ]
   },
   "misc": {
     "title": "Miscellaneous",
     "description": "Workshops not properly categorized yet.",
     "slugs": [],
-    "hq": []
+    "hq": [
+      "kahoot",
+      "api_canvas",
+      "minecraft_modding",
+      "shared_clipboard"
+    ]
   }
 }

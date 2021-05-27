@@ -207,12 +207,12 @@ function Details({ workshops, current, ...rest }) {
 
         {/* hq workshops */}
         {workshops[current].hq?.map(w =>
-          <Box bg={useColorModeValue("gray.50", "gray.700")}
+          <Flex direction="column" bg={useColorModeValue("gray.50", "gray.700")}
             borderRadius="xl" overflow="hidden"
             borderWidth={useColorModeValue(1, 0)} borderColor="gray.200"
             key={w.slug}
           >
-            <Box py={4} px={3}>
+            <Box flex={1} py={4} px={3}>
               <Heading as="h3" size="md">
                 <Link href={`https://workshops.hackclub.com/${w.slug}`} isExternal>
                   {w.title}
@@ -231,7 +231,7 @@ function Details({ workshops, current, ...rest }) {
                 onError={e => e.target.style.display = 'none'} ignoreFallback
               />
             }
-          </Box>
+          </Flex>
         )}
       </SimpleGrid>
       {workshops[current].slugs.length === 0 && workshops[current].hq.length === 0 &&
