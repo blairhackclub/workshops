@@ -1,5 +1,5 @@
 ---
-title: 'Example'
+title: 'Custom Components'
 thumbnail: 
 description: 'An example workshop showcasing custom components.'
 author: 'linkai101'

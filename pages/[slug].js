@@ -24,8 +24,8 @@ import Icon from '@hackclub/icons';
 export default function WorkshopPage({ params, source, frontMatter }) {
   const githubURL = 
     process.env.NODE_ENV === 'production' ? 
-      `${config.githubRepo}/blob/master/data/workshops/${params.slug}.mdx` 
-    : `${config.githubRepo}/blob/dev/data/workshops/${params.slug}.mdx`;
+      `${config.githubRepo}/blob/master/workshops/${params.slug}/README.md` 
+    : `${config.githubRepo}/blob/dev/workshops/${params.slug}/README.md`;
   const author = {
     name: frontMatter.author,
     avatar: `https://github.com/${frontMatter.author}.png`,

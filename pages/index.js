@@ -18,6 +18,7 @@ import {
   Button,
   Select,
   Image,
+  Tag,
   useColorModeValue,
   useBreakpointValue,
 } from '@chakra-ui/react';
@@ -27,17 +28,17 @@ export default function Home({ workshops }) {
   const [current, setCurrent] = React.useState("starters");
 
   React.useEffect(() => {
-    //checkQuery();
+    checkQuery();
   }, [router]);
 
-  /*function checkQuery() {
+  function checkQuery() {
     if (router.query?.category) {
       if (!workshops[router.query.category]) { // if is not a valid category
         return router.push(`/`, undefined, { shallow: true });
       }
       setCurrent(router.query.category);
     }
-  }*/
+  }
 
   function onCategoryClick(newCategory) {
     setCurrent(newCategory);
@@ -175,10 +176,10 @@ function Details({ workshops, current, ...rest }) {
       </Box>
 
       <SimpleGrid columns={{ base: 1, sm: 2, lg: 3 }} spacing={8} py={4}>
-        {workshops[current].data.map(w =>
-          <Box bg={useColorModeValue("white", "gray.700")}
+        {workshops[current].slugs.map(w =>
+          <Box bg={useColorModeValue("gray.50", "gray.700")}
             borderRadius="xl" overflow="hidden"
-            boxShadow="xl"
+            borderWidth={useColorModeValue(1, 0)} borderColor="gray.200"
             key={w.slug}
           >
             <Box py={4} px={3}>
@@ -198,12 +199,42 @@ function Details({ workshops, current, ...rest }) {
                 w="100%" h="128px" 
                 src={w.thumbnail} alt={w.title}
                 objectFit="cover"
+                onError={e => e.target.style.display = 'none'} ignoreFallback
               />
             }
           </Box>
-          )}
+        )}
+
+        {/* hq workshops */}
+        {workshops[current].hq?.map(w =>
+          <Box bg={useColorModeValue("gray.50", "gray.700")}
+            borderRadius="xl" overflow="hidden"
+            borderWidth={useColorModeValue(1, 0)} borderColor="gray.200"
+            key={w.slug}
+          >
+            <Box py={4} px={3}>
+              <Heading as="h3" size="md">
+                <Link href={`https://workshops.hackclub.com/${w.slug}`} isExternal>
+                  {w.title}
+                </Link>
+              </Heading>
+              <Tag size="sm" colorScheme="orange" fontWeight="semibold" my={1}>HQ Workshop</Tag>
+              <Text color="brand.muted" fontSize="md" mt={1} lineHeight={1.4} minH="2.8em" noOfLines={2}>
+                {w.description}
+              </Text>
+            </Box>
+            {w.thumbnail &&
+              <Image 
+                w="100%" h="128px" 
+                src={w.thumbnail} alt={w.title} 
+                objectFit="cover"
+                onError={e => e.target.style.display = 'none'} ignoreFallback
+              />
+            }
+          </Box>
+        )}
       </SimpleGrid>
-      {workshops[current].data.length === 0 &&
+      {workshops[current].slugs.length === 0 && workshops[current].hq.length === 0 &&
         <Text>
           No workshops yet!
         </Text>
