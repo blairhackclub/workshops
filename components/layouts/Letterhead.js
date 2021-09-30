@@ -43,7 +43,7 @@ export default function Letterhead(props) {
         </Head>
       }
 
-      <Container maxW="container.md" align="center" py={8}>
+      <Container maxW="container.md" align="center" pb={8} pt={20}>
         <Heading as="h1" size="2xl" color="brand.red">{title}</Heading>
         <Heading as="h2" size="md" fontWeight="semibold" mt={2}>{description}</Heading>
         <Stack direction="row" align="center" justify="center" mt={4}>

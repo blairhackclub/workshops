@@ -8,6 +8,7 @@ import {
   Flex,
   Stack,
   IconButton,
+  Button,
   Link,
   Image,
   useColorModeValue,
@@ -25,6 +26,7 @@ export default function NavbarComponent({ ...rest }) {
         align="center" justify="space-between" wrap="wrap"
         w="100%" zIndex={100}
         color="brand.red"
+        position="absolute"
         {...rest}
       >
         {['/'].includes(router.pathname) ? <Logo/>
@@ -35,8 +37,17 @@ export default function NavbarComponent({ ...rest }) {
           align="center"
           direction="row"
         >
-          <Link href={config.githubRepo} isExternal><IconButton icon={<Icon glyph="github"/>}/></Link>
-          <ColorModeToggle color={useColorModeValue("brand.red", "white")}/>
+          <Link href={config.githubRepo} isExternal>
+            <IconButton 
+              icon={<Icon glyph="github"/>} 
+              color={useColorModeValue("white", ['/'].includes(router.pathname) ? "white" : "brand.red")} 
+              colorScheme="blackAlpha"
+            />
+          </Link>
+          <ColorModeToggle 
+            color={useColorModeValue("white", ['/'].includes(router.pathname) ? "white" : "brand.red")} 
+            colorScheme="blackAlpha"
+          />
         </Stack>
       </Flex>
     </>
@@ -57,10 +68,14 @@ function Home({ ...rest }) {
   return (
     <Box p={4} {...rest}>
       <NextLink href="/" passHref>
-        <Link>
-          <Flex align="center">
-            <Icon glyph="view-back"/> All Workshops
-          </Flex>
+        <Link style={{ textDecoration: "none" }}>
+          <Button 
+            pl={0} leftIcon={<Icon glyph="view-back"/>} 
+            color={useColorModeValue("white", "brand.red")} 
+            colorScheme="blackAlpha"
+          >
+            Back
+          </Button>
         </Link>
       </NextLink>
     </Box>

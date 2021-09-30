@@ -34,7 +34,7 @@ You can add your components straight to this file or create separate component f
 
 Then, add each of the components to the `export default` object, where all of the components will be imported to the site.
 
-Finally, in the `README.md` file, add the React component anywhere on the page. For example, you can add it like this: `<OrpheusInput/>`. (It has to be on a separate line.)\
+Finally, in the `README.md` file, add the React component anywhere on the page. For example, you can add it like this: `<OrpheusInput/>`. (It has to be on a separate line.)
 
 ## That's it!
 It's that easy! Still confused? Check out the source code by clicking "Edit on GitHub" below or get help on our [Discord](https://bhc.page.link/discord).

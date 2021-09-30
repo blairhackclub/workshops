@@ -10,8 +10,8 @@ export default function ColorModeToggle(props) {
     <IconButton
       icon={
         colorMode === 'light' ? 
-        <SunIcon boxSize={5} color="brand.red"/> 
-        : <MoonIcon boxSize={5} color="brand.red"/>
+        <SunIcon boxSize={5}/> 
+        : <MoonIcon boxSize={5}/>
       }
       onClick={toggleColorMode}
       {...rest}

@@ -1,0 +1,52 @@
+{
+  "club": {
+    "title": "Club workshops",
+    "description": "Workshops that we covered during past club meetings this year. Feel free to continue hacking on what you made during club!",
+    "slugs": ["cookie_clicker", "personal_website"]
+  },
+  "web": {
+    "title": "Web development",
+    "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs, with HTML/CSS/JS.",
+    "slugs": ["personal_website", "cookie_clicker"]
+  },
+  "advancedweb": {
+    "title": "Advanced web development",
+    "description": "Learn popular frontend JavaScript frameworks like React and Vue, which are used by companies like Facebook and Google.",
+    "slugs": []
+  },
+  "games": {
+    "title": "Game development",
+    "description": "Learn to build games, both locally and on the web!",
+    "slugs": []
+  },
+  "python": {
+    "title": "Python",
+    "description": "Learn to use one of the most powerful and beginner-friendly languages.",
+    "slugs": []
+  },
+  "rust": {
+    "title": "Rust",
+    "description": "Learn a popular systems programming language used to build operating systems, game engines, simulation engines, and more.",
+    "slugs": []
+  },
+  "ml": {
+    "title": "Machine learning",
+    "description": "Learn how to make machines learn with these fun projects!",
+    "slugs": []
+  },
+  "cybersec": {
+    "title": "Cybersecurity",
+    "description": "Learn about cybersecurity and finding vulnerabilities in systems.",
+    "slugs": []
+  },
+  "hardware": {
+    "title": "Hardware",
+    "description": "Bring projects from cyberspace to the real world with Arduinos and more.",
+    "slugs": []
+  },
+  "misc": {
+    "title": "Miscellaneous",
+    "description": "Workshops not properly categorized yet.",
+    "slugs": []
+  }
+}

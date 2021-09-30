@@ -10,6 +10,8 @@ import { getWorkshopSlugs, getWorkshopData } from "../lib/workshops";
 import {
   Box,
   Container,
+  Flex,
+  HStack,
   Heading,
   Text,
   Button,
@@ -46,7 +48,7 @@ export default function WorkshopPage({ params, source, frontMatter }) {
       </Head>
 
       <Box bg={`linear-gradient(rgba(0,0,0,${useColorModeValue(0.125, 0.5)}), rgba(0,0,0,${useColorModeValue(0.25, 0.75)})), url(https://workshops.hackclub.com/api/patterns/${params.slug})`} color="white">
-        <Container maxW="container.md" align="center" py={16}>
+        <Container maxW="container.md" align="center" pb={16} pt={20}>
           <Heading as="h1" size="2xl">{frontMatter.title}</Heading>
           <Heading as="h2" size="md" fontWeight="semibold" mt={2}>{frontMatter.description}</Heading>
           
@@ -67,13 +69,20 @@ export default function WorkshopPage({ params, source, frontMatter }) {
       </Box>
 
       <Container maxW="container.md" pt={8} pb={4}>
-        <Text fontStyle="italic">
-          Last updated: {frontMatter.date}
-        </Text>
+        <Flex justify="space-between" direction={{ base: "column", sm: "row" }}>
+          <Text>
+            Last updated: {frontMatter.date}
+          </Text>
+          <HStack spacing={3} color="brand.red" fontWeight="bold">
+            {frontMatter.slides && <Link href={frontMatter.slides} isExternal>Slides</Link>}
+            {frontMatter.demo && <Link href={frontMatter.demo} isExternal>Demo</Link>}
+            {frontMatter.finalCode && <Link href={frontMatter.finalCode} isExternal>Final code</Link>}
+          </HStack>
+        </Flex>
 
         <MDXRemote {...source} components={components}/>
         
-        <Box py={4}>
+        <Box mt={6}>
           <Link href={githubURL} 
             style={{ textDecoration: "none" }} isExternal
           >

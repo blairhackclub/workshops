@@ -11,6 +11,7 @@ import {
   Container,
   Flex,
   Stack,
+  HStack,
   SimpleGrid,
   Heading,
   Text,
@@ -25,24 +26,24 @@ import {
 
 export default function Home({ workshops }) {
   const router = useRouter();
-  const [current, setCurrent] = React.useState("starters");
+  const [current, setCurrent] = React.useState("club");
 
   React.useEffect(() => {
     checkQuery();
   }, [router]);
 
   function checkQuery() {
-    if (router.query?.category) {
-      if (!workshops[router.query.category]) { // if is not a valid category
+    if (router.query?.c) {
+      if (!workshops[router.query.c]) { // if is not a valid category
         return router.push(`/`, undefined, { shallow: true });
       }
-      setCurrent(router.query.category);
+      setCurrent(router.query.c);
     }
   }
 
   function onCategoryClick(newCategory) {
     setCurrent(newCategory);
-    router.push(`/?category=${newCategory}`, undefined, { shallow: true });
+    router.push(`/?c=${newCategory}`, undefined, { shallow: true });
   }
 
   return (
@@ -54,50 +55,59 @@ export default function Home({ workshops }) {
         <meta property="og:description" content="Our collection of exclusive community-contributed coding tutorials + ideas." key="ogdesc"/>
       </Head>
 
-      <Container maxW="container.lg" px={8} py={12} align="center">
-        <Heading as="h1" size="2xl" color="brand.red">
-          Blair Hack Club Workshops
-        </Heading>
-        <Heading as="h2" size="md" mt={4} fontWeight="normal">
-          Learn to code with our own collection of community-contributed coding tutorials + ideas.
-        </Heading>
+      <Box pt={20} pb={8} bg="brand.red" color="white">
+        <Container maxW="container.xl" px={6}>
+          <Stack direction={{ base: "column", sm: "row" }} spacing={{ base: 6, sm: 10 }}>
+            <Box flex={1}>
+              <Heading as="h1" size="2xl">
+                Workshops
+              </Heading>
+              <Text mt={2} fontSize="lg">
+                Our collection of self-guided and extended workshops!
+              </Text>
 
-        <Stack direction="row" justify="center" spacing={{ base: 2, md: 4 }} mt={6} color="brand.red">
-          <Link href="https://workshops.hackclub.com/preface" style={{ textDecoration: "none" }} isExternal>
-            <Button size={useBreakpointValue({ base: "sm", md: "md" })}
-              borderRadius="full" borderColor="brand.red" borderWidth={2}
-              bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
-              fontWeight="bold"
-            >
-              Preface
-            </Button>
-          </Link>
-          <Link href="https://hackclub.com/philosophy/" style={{ textDecoration: "none" }} isExternal>
-            <Button size={useBreakpointValue({ base: "sm", md: "md" })}
-              borderRadius="full" borderColor="brand.red" borderWidth={2}
-              bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
-              fontWeight="bold"
-            >
-              Our Philosophy
-            </Button>
-          </Link>
-          {/* 
-          <NextLink href="/challenges" passHref>
-            <Link style={{ textDecoration: "none" }}>
-              <Button w="100%" size={useBreakpointValue({ base: "sm", md: "md" })}
-                borderRadius="full" borderColor="brand.red" borderWidth={2}
-                bg="none" _hover={{ bg: useColorModeValue("gray.100", "gray.700") }}
-                fontWeight="bold"
-              >
-                Challenges
-              </Button>
-            </Link>
-          </NextLink> 
-          */}
-        </Stack>
-      </Container>
+              <Stack direction="row" spacing={{ base: 4, sm: 2 }} justify={{ base: "center", sm: "flex-start" }} mt={3} color="white">
+                <Link href="https://workshops.hackclub.com/preface" style={{ textDecoration: "none" }} isExternal>
+                  <Button size={useBreakpointValue({ base: "md", sm: "sm" })}
+                    borderRadius="full" borderColor="white" borderWidth={2}
+                    bg="none" _hover={{ bg: "primary.400" }}
+                    fontWeight="bold"
+                  >
+                    Preface
+                  </Button>
+                </Link>
+                <Link href="https://hackclub.com/philosophy/" style={{ textDecoration: "none" }} isExternal>
+                  <Button size={useBreakpointValue({ base: "md", sm: "sm" })}
+                    borderRadius="full" borderColor="white" borderWidth={2}
+                    bg="none" _hover={{ bg: "primary.400" }}
+                    fontWeight="bold"
+                  >
+                    Philosophy
+                  </Button>
+                </Link>
+              </Stack>
+            </Box>
 
-      <Container maxW="container.xl">
+            <Flex p={4} borderRadius="xl" bg="rgba(255,255,255,0.2)" align="center">
+              <Image src="/images/logos/blairhackclub.png" boxSize="64px" borderRadius="lg" mr={4} display={{ base: "block", sm: "none", md: "block" }}/>
+              <Box flex={1}>
+                <Heading size="sm">JOIN US NEXT WEEK!</Heading>
+                <Heading size="md" fontWeight="normal" mt={1}>
+                  Mondays at lunch
+                </Heading>
+                <Text>
+                  11:20AM @ Room 314
+                </Text>
+                <Text fontStyle="italic" fontSize="sm">
+                  *subject to change
+                </Text>
+              </Box>
+            </Flex>
+          </Stack>
+        </Container>
+      </Box>
+
+      <Container maxW="container.xl" pt={4}>
         <Flex direction={{ base: "column", md: "row" }}>
           {useBreakpointValue({ 
             base: <CategoriesSelect flex={1} workshops={workshops} current={current} setCurrent={setCurrent} onCategoryClick={onCategoryClick}/>, 
@@ -204,37 +214,8 @@ function Details({ workshops, current, ...rest }) {
             }
           </Box>
         )}
-
-        {/* hq workshops */}
-        {workshops[current].hq?.map(w =>
-          <Flex direction="column" bg={useColorModeValue("gray.50", "gray.700")}
-            borderRadius="xl" overflow="hidden"
-            borderWidth={useColorModeValue(1, 0)} borderColor="gray.200"
-            key={w.slug}
-          >
-            <Box flex={1} py={4} px={3}>
-              <Heading as="h3" size="md">
-                <Link href={`https://workshops.hackclub.com/${w.slug}`} isExternal>
-                  {w.title}
-                </Link>
-              </Heading>
-              <Tag size="sm" colorScheme="orange" fontWeight="semibold" my={1}>HQ Workshop</Tag>
-              <Text color="brand.muted" fontSize="md" mt={1} lineHeight={1.4} minH="2.8em" noOfLines={2}>
-                {w.description}
-              </Text>
-            </Box>
-            {w.thumbnail &&
-              <Image 
-                w="100%" h="128px" 
-                src={w.thumbnail} alt={w.title} 
-                objectFit="cover"
-                onError={e => e.target.style.display = 'none'} ignoreFallback
-              />
-            }
-          </Flex>
-        )}
       </SimpleGrid>
-      {workshops[current].slugs.length === 0 && workshops[current].hq.length === 0 &&
+      {workshops[current].slugs.length === 0 &&
         <Text>
           No workshops yet!
         </Text>
