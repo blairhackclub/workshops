@@ -1,0 +1,24 @@
+{
+  "10.4.2021": {
+    "title": "Meeting 4 (Speak Colors)",
+    "description": "Happy October! 🎃 The workshop this week will be Speak Colors. You will learn a few JS libraries and use HTML/CSS/JS to color your screen with your voice via speech recognition. Join us this Monday!",
+    "slug": ""
+  },
+  "9.27.2021": {
+    "title": "Meeting 3 (Cookie Clicker)",
+    "description": "We're taking in feedback and suggestions to help improve our club! This week, we're going to take a step back and run a Cookie Clicker workshop, where you will learn more JavaScript fundamentals and create a clone of the popular Cookie Clicker game.",
+    "slug": "cookie_clicker"
+  },
+  "9.20.2021": {
+    "title": "Meeting 2 (Splatter Paint)",
+    "description": "Thanks to everyone who came to our first meeting! This week, we'll be running a Splatter Paint workshop, where you will be making a canvas website that you can splatter paint on using the Paper.js library.",
+    "slides" : "",
+    "slug": "splatter_paint"
+  },
+  "9.13.2021": {
+    "title": "Interest Meeting 2021-22",
+    "description": "The very first Hack Club meeting at Blair! We will run a Personal Website workshop where you will learn the basics of HTML, CSS, and JS and create your very own website from scratch.",
+    "slides" : "",
+    "slug": "personal_website"
+  }
+}

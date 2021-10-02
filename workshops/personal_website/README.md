@@ -3,13 +3,12 @@ title: 'Personal Website'
 thumbnail: 'https://workshops.hackclub.com/_next/image?url=%2Fcontent%2Fworkshops%2Fpersonal_website%2Fimg%2Fdemo.png&w=512&q=75'
 description: 'Make your first website from scratch'
 author: 'MaxWofford'
-date: 'ur mom'
-slides:
-demo: 'https://website--prophetorpheus.repl.co'
+date: '10/2/2021'
+finalDemo: 'https://website--prophetorpheus.repl.co'
 finalCode: 'https://repl.it/@prophetorpheus/website'
 ---
 
-# Personal Website
+*This workshop is a work-in-progress.*
 
 Prophet Orpheus, [our mascot](https://hackclub.com/workshops/orpheus), is here to guide you through making your own personal website.
 

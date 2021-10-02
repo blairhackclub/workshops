@@ -69,13 +69,12 @@ export default function WorkshopPage({ params, source, frontMatter }) {
       </Box>
 
       <Container maxW="container.md" pt={8} pb={4}>
-        <Flex justify="space-between" direction={{ base: "column", sm: "row" }}>
+        <Flex justify="space-between">
           <Text>
             Last updated: {frontMatter.date}
           </Text>
           <HStack spacing={3} color="brand.red" fontWeight="bold">
-            {frontMatter.slides && <Link href={frontMatter.slides} isExternal>Slides</Link>}
-            {frontMatter.demo && <Link href={frontMatter.demo} isExternal>Demo</Link>}
+            {frontMatter.finalDemo && <Link href={frontMatter.finalDemo} isExternal>Demo</Link>}
             {frontMatter.finalCode && <Link href={frontMatter.finalCode} isExternal>Final code</Link>}
           </HStack>
         </Flex>
