@@ -96,7 +96,7 @@ export default function Home({ workshops }) {
             </Box>
 
             <Flex p={4} borderRadius="xl" bg="rgba(255,255,255,0.2)" align="center">
-              <Image src="/images/logos/blairhackclub.png" boxSize="64px" borderRadius="lg" mr={4} display={{ base: "block", sm: "none", md: "block" }}/>
+              <Image src="/logos/blairhackclub.png" boxSize="64px" borderRadius="lg" mr={4} display={{ base: "block", sm: "none", md: "block" }}/>
               <Box flex={1}>
                 <Heading size="sm">JOIN US NEXT WEEK!</Heading>
                 <Heading size="md" fontWeight="normal" mt={1}>
