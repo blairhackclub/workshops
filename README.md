@@ -1,5 +1,5 @@
 <p align="center"><img width="192" alt="Hack Club logo" src="https://blair.hackclub.com/images/logos/blairhackclub.png"></p>
-<h1 align="center"><a href="https://blair.hackclub.com/">Blair Hack Club Workshops</a></h1>
+<h1 align="center"><a href="https://workshops.pages.dev">Blair Hack Club Workshops</a></h1>
 <p align="center"><i>Our collection of community-contributed coding tutorials + ideas.</i></p>
 
 

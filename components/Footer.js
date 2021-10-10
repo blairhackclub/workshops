@@ -1,5 +1,5 @@
 import React from 'react';
-import config from '../data/config';
+import config from '../config';
 
 import {
   Container,
@@ -11,7 +11,7 @@ import {
 export default function FooterComponent() {
   return (
     <Container as="footer" 
-      maxW="container.md" p={8}
+      maxW="container.md" py={12}
       align="center"
     >
       <Text fontSize="lg" color="brand.muted">
