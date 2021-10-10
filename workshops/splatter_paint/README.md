@@ -3,12 +3,12 @@ title: 'Splatter Paint'
 thumbnail: 'https://workshops.hackclub.com/_next/image?url=%2Fcontent%2Fworkshops%2Fsplatter_paint%2Fimg%2Fdemo.png&w=512&q=75'
 description: 'Crazy colorful splatter paint in your browser with Paper.js'
 author: 'MatthewStanciu'
-date: '10/2/2021'
+date: '6/6/2021'
 finalDemo: 'https://splatter-paint.techbug2012.repl.co/'
 finalCode: 'https://replit.com/@TechBug2012/splatter-paint#indexhtml'
 ---
 
-*This workshop is a work-in-progress.*
+*This workshop was written by our friends at Hack Club HQ!*
 
 **Warning: the following workshop involves flashing colors and is not recommended for those with a history of epilepsy.**
 

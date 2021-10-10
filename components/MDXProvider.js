@@ -48,7 +48,7 @@ export default function MDXCompProvider(props) {
     del: (props) => <Text as="span" textDecoration="line-through" {...props}/>,
     hr: (props) => <Divider my={4} {...props}/>,
     a: (props) => <Link color="brand.red" href={props.url} title={props.title} {...props}/>,
-    img: (props) => <Image my={4} {...props}/>,
+    img: (props) => <Image my={4} boxShadow="xs" borderRadius="md" {...props}/>,
   };
 
   return (

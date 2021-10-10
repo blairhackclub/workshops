@@ -3,12 +3,12 @@ title: 'Personal Website'
 thumbnail: 'https://workshops.hackclub.com/_next/image?url=%2Fcontent%2Fworkshops%2Fpersonal_website%2Fimg%2Fdemo.png&w=512&q=75'
 description: 'Make your first website from scratch'
 author: 'MaxWofford'
-date: '10/2/2021'
+date: '10/10/2021'
 finalDemo: 'https://website--prophetorpheus.repl.co'
 finalCode: 'https://repl.it/@prophetorpheus/website'
 ---
 
-*This workshop is a work-in-progress.*
+*This workshop was written by our friends at Hack Club HQ!*
 
 Prophet Orpheus, [our mascot](https://hackclub.com/workshops/orpheus), is here to guide you through making your own personal website.
 
@@ -276,14 +276,13 @@ A good way to get ideas for what to add to your website is to look at other peop
 
 **Websites Made by Other Hack Club Hackers:**
 
+- [Linkai Wu](https://linkaiwu.com)
+- [Tinu Vanapamula](https://tinu.tech)
 - [Kat Huang](https://katmh.com)
 - [Theo Bleier](https://tmb.sh/)
-- [Megan Cui](https://megancui.com/)
 - [Matthew Stanciu](https://matthewstanciu.me/)
-- [Winston Iskandar](https://winstoniskandar.com)
 - [Sophie Huang](https://sohuang.github.io/)
 - [Jevin Sidhu](http://jevinsidhu.com/)
-- [Sam Poder](http://sampoder.com/)
 
 **Websites Made by Professionals:**
 
@@ -300,17 +299,10 @@ A good way to get ideas for what to add to your website is to look at other peop
 
 These are some additional resources that you can use to make your site even better!
 
-- [HTML Dog](http://www.htmldog.com/guides/html/beginner/): _Very beginner focused. If you're not sure which one to choose, pick this one._
+- [W3Schools](http://www.w3schools.com): _An extensive collection about all there is to know about HTML/CSS, JavaScript, and even other languages such as Python and PHP._
 - [Free Code Camp](http://www.freecodecamp.com/map): _Interactive and very methodical._
 - [Treehouse](https://teamtreehouse.com/library/html/introduction/): _Their videos are extremely comprehensive and thorough._
 
 ## Part VI: Sharing with the Community
 
 Now that you have finished building a website, you should share your beautiful creation—because your site is on the internet, you can share it with anyone who is also online! Remember, it's as easy as giving them your URL!
-
-You probably know the best ways to get in touch with your friends and family, but if you want to share your project with the world wide Hack Club community there is no better place to do that than on Slack.
-
-1. In a new tab, open and follow [these directions][slack] to signup for our Slack.
-2. Then, post the link to the [`#ship`](https://hackclub.slack.com/messages/ship) channel to share it with everyone!
-
-[slack]: https://slack.hackclub.com/

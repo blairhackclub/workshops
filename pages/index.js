@@ -28,7 +28,7 @@ import {
 const tabs = {
   club: "Club Meetings",
   workshops: "Workshops",
-  challenges: "Challenges"
+  //challenges: "Challenges"
 }
 
 export default function Home({ workshops }) {
@@ -105,9 +105,6 @@ export default function Home({ workshops }) {
                 <Text>
                   11:20AM @ Room 314
                 </Text>
-                <Text fontStyle="italic" fontSize="sm">
-                  *subject to change
-                </Text>
               </Box>
             </Flex>
           </Stack>
@@ -124,7 +121,7 @@ export default function Home({ workshops }) {
           {current === 'club' ?
             <Club pl={{ base: 0, md: 12 }} pt={{ base: 8, md: 4 }} flex={3}/>
             : current === 'challenges' ? 
-            <Box pl={{ base: 0, md: 12 }} pt={{ base: 8, md: 4 }} flex={3} children={"Challenges are coming soon!"}/>
+            <Box pl={{ base: 0, md: 12 }} pt={{ base: 8, md: 4 }} flex={3} /*children={"Challenges are coming soon!"}*//>
             : 
             <Workshops pl={{ base: 0, md: 12 }} pt={{ base: 8, md: 4 }} flex={3} workshops={workshops}/>
           }

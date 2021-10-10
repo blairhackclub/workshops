@@ -1,26 +1,32 @@
 {
+  "10.11.2021": {
+    "title": "Meeting 5 (Painting App)",
+    "description": "We're making a MSPaint style app today! We'll use HTML/CSS/JS, implementing the HTML canvas, to create an awesome painting app in your browser. See you there!",
+    "slides": "/slides/10_11_2021 - Painting App.pdf",
+    "slug": "painting_app"
+  },
   "10.4.2021": {
     "title": "Meeting 4 (Speak Colors)",
     "description": "Happy October! 🎃 The workshop this week will be Speak Colors. You will learn a few JS libraries and use HTML/CSS/JS to color your screen with your voice via speech recognition. Join us this Monday!",
-    "slides": "https://docs.google.com/presentation/d/1wXYdELQV9Q5CcA8RHJYZOpuDJ8cyWTI7oAqF0Mj9x8I",
+    "slides": "/slides/10_4_2021 - Speak Colors.pdf",
     "slug": ""
   },
   "9.27.2021": {
     "title": "Meeting 3 (Cookie Clicker)",
     "description": "We're taking in feedback and suggestions to help improve our club! This week, we're going to take a step back and run a Cookie Clicker workshop, where you will learn more JavaScript fundamentals and create a clone of the popular Cookie Clicker game.",
-    "slides": "https://docs.google.com/presentation/d/1yVnX9Uc4F4qCsApRBbqL6I90I9RJUowI33rPp-QB3GM",
-    "slug": "cookie_clicker"
+    "slides": "/slides/9_27_2021 - Cookie Clicker.pdf",
+    "slug": ""
   },
   "9.20.2021": {
     "title": "Meeting 2 (Splatter Paint)",
     "description": "Thanks to everyone who came to our first meeting! This week, we'll be running a Splatter Paint workshop, where you will be making a canvas website that you can splatter paint on using the Paper.js library.",
-    "slides" : "https://docs.google.com/presentation/d/1KehOvpnYThVyOsAmZIUIL8cScmBPq9_8umxN-NRwUs0",
+    "slides" : "/slides/9_13_2021 - Splatter Paint.pdf",
     "slug": "splatter_paint"
   },
   "9.13.2021": {
     "title": "Interest Meeting 2021-22",
     "description": "The very first Hack Club meeting at Blair! We will run a Personal Website workshop where you will learn the basics of HTML, CSS, and JS and create your very own website from scratch.",
-    "slides" : "https://docs.google.com/presentation/d/1OEAFul2mjvJNt8D83lqFLVejqdDmNnnjh4jedX2pboc",
+    "slides" : "/slides/9_13_2021 - Interest Meeting.pdf",
     "slug": "personal_website"
   }
 }
