@@ -260,7 +260,7 @@ function Club({ ...rest }) {
                   {date}
                 </Text>
                 {m.slug && <Text>
-                  <Link href={`/${m.slug}`} color="brand.red" fontWeight="bold" isExternal>Workshop</Link>
+                  <Link href={`/${m.slug}`} color="brand.red" fontWeight="bold">Workshop</Link>
                 </Text>}
                 {m.slides && <Text>
                   <Link href={m.slides} color="brand.red" fontWeight="bold" isExternal>Slides</Link>

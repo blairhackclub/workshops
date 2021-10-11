@@ -94,7 +94,7 @@ Now that we have our HTML document ready to go, we are going to start adding the
 So, the first thing we want to do, is to use the `onload` event, which runs a block of code when a given resource has loaded. In this case, we want our javascript file to run when the HTML document has finished loading.
 
 ```javascript
-window.onload() {
+window.onload = function() {
 
 }
 ```

@@ -57,7 +57,7 @@ export default function NavbarComponent({ ...rest }) {
 function Logo({ ...rest }) {
   return (
     <Box px={8} {...rest}>
-      <Link href={config.mainSite} isExternal>
+      <Link href={config.mainSite}>
         <Image h={16} src="/branding/flag-orpheus-top.svg"/>
       </Link>
     </Box>
