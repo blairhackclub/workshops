@@ -1,4 +1,10 @@
 {
+  "10.18.2021": {
+    "title": "Meeting 6 (Lab Day)",
+    "description": "We're going to be hosting a lab day, so you'll have a chance to improve and add your personal spin on the workshops that we've covered so far. Hope to see you there!",
+    "slides": "/slides/10_18_2021 - Lab Day!.pdf",
+    "slug": ""
+  },
   "10.11.2021": {
     "title": "Meeting 5 (Painting App)",
     "description": "We're making a MSPaint style app today! We'll use HTML/CSS/JS, implementing the HTML canvas, to create an awesome painting app in your browser. See you there!",
@@ -9,7 +15,7 @@
     "title": "Meeting 4 (Speak Colors)",
     "description": "Happy October! 🎃 The workshop this week will be Speak Colors. You will learn a few JS libraries and use HTML/CSS/JS to color your screen with your voice via speech recognition. Join us this Monday!",
     "slides": "/slides/10_4_2021 - Speak Colors.pdf",
-    "slug": ""
+    "slug": "speak_colors"
   },
   "9.27.2021": {
     "title": "Meeting 3 (Cookie Clicker)",

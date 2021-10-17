@@ -3,7 +3,7 @@ title: 'Personal Website'
 thumbnail: 'https://workshops.hackclub.com/_next/image?url=%2Fcontent%2Fworkshops%2Fpersonal_website%2Fimg%2Fdemo.png&w=512&q=75'
 description: 'Make your first website from scratch'
 author: 'MaxWofford'
-date: '10/10/2021'
+date: '9/7/2021'
 finalDemo: 'https://website--prophetorpheus.repl.co'
 finalCode: 'https://repl.it/@prophetorpheus/website'
 ---
