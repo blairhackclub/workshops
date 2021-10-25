@@ -1,4 +1,10 @@
 {
+  "10.25.2021": {
+    "title": "Meeting 7 (Chart.js)",
+    "description": "We're going to be exploring charts with chart.js, we're going to be creating cool visualizations of data suing bar charts, pie charts. Hope to see your there!",
+    "slides": "/slides/10_25_2021 - Charts with Chart.js.pdf",
+    "slug": "chart_js"
+  },
   "10.18.2021": {
     "title": "Meeting 6 (Lab Day)",
     "description": "We're going to be hosting a lab day, so you'll have a chance to improve and add your personal spin on the workshops that we've covered so far. Hope to see you there!",
