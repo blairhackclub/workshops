@@ -1,15 +1,19 @@
 {
+  "11.1.2021": {
+    "title": "Meeting 8 (Lab Day)",
+    "description": "Just a lab day today before the end of the quarter! You can work on your coding projects, catch up on your homework, or come to hang out.",
+    "slides": "/slides/11_1_2021 - Lab Day.pdf"
+  },
   "10.25.2021": {
     "title": "Meeting 7 (Chart.js)",
-    "description": "We're going to be exploring charts with chart.js, we're going to be creating cool visualizations of data suing bar charts, pie charts. Hope to see your there!",
+    "description": "We're going to be exploring charts with chart.js, we're going to be creating cool visualizations of data suing bar charts, pie charts. Hope to see you there!",
     "slides": "/slides/10_25_2021 - Charts with Chart.js.pdf",
     "slug": "chart_js"
   },
   "10.18.2021": {
     "title": "Meeting 6 (Lab Day)",
     "description": "We're going to be hosting a lab day, so you'll have a chance to improve and add your personal spin on the workshops that we've covered so far. Hope to see you there!",
-    "slides": "/slides/10_18_2021 - Lab Day!.pdf",
-    "slug": ""
+    "slides": "/slides/10_18_2021 - Lab Day.pdf"
   },
   "10.11.2021": {
     "title": "Meeting 5 (Painting App)",
@@ -26,8 +30,7 @@
   "9.27.2021": {
     "title": "Meeting 3 (Cookie Clicker)",
     "description": "We're taking in feedback and suggestions to help improve our club! This week, we're going to take a step back and run a Cookie Clicker workshop, where you will learn more JavaScript fundamentals and create a clone of the popular Cookie Clicker game.",
-    "slides": "/slides/9_27_2021 - Cookie Clicker.pdf",
-    "slug": ""
+    "slides": "/slides/9_27_2021 - Cookie Clicker.pdf"
   },
   "9.20.2021": {
     "title": "Meeting 2 (Splatter Paint)",
