@@ -2,7 +2,7 @@
   "web": {
     "title": "Web development",
     "description": "Learn how to make things happen on the web, from basic JavaScript to web APIs, with HTML/CSS/JS.",
-    "slugs": ["personal_website", "splatter_paint", "speak_colors", "painting_app", "chart_js"]
+    "slugs": ["personal_website", "splatter_paint", "speak_colors", "painting_app", "chart_js", "memory_game"]
   },
   "advancedweb": {
     "title": "Advanced web development",

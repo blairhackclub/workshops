@@ -1,4 +1,10 @@
 {
+  "11.8.2021": {
+    "title": "Meeting 9 (Memory Game)",
+    "description": "Today, we're gonna make Memory Game in JavaScript! Come and you'll have a fun, working game from scratch at the end!",
+    "slides": "/slides/11_8_2021 - Memory Game.pdf",
+    "slug": "memory_game"
+  },
   "11.1.2021": {
     "title": "Meeting 8 (Lab Day)",
     "description": "Just a lab day today before the end of the quarter! You can work on your coding projects, catch up on your homework, or come to hang out.",
